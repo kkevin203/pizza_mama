@@ -22,6 +22,7 @@ namespace pizza_mama.Pages
             if (_context.Pizzas != null)
             {
                 Pizza = await _context.Pizzas.ToListAsync();
+                Pizza = Pizza.OrderBy(p => p.Price).ToList();
             }
         }
     }
