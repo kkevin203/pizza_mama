@@ -2,6 +2,12 @@
 @model pizza_mama.Pages.Admin.IndexModel
 @{
 }
+@if (Model.IsDevelopmentMode)
+{
+<p>MODE DEVELOPPEMENT</p>
+    
+}
+
 
 
 @if (Model.DisplayInvalidAccountMessage)

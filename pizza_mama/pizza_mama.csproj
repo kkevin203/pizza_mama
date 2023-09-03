@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\css\StyleSheet.css" />
+    <Content Remove="wwwroot\css\StyleSheet1.css" />
   </ItemGroup>
 
   <ItemGroup>

@@ -3,16 +3,24 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Security.Claims;
+using Microsoft.Extensions.Hosting;
 
 namespace pizza_mama.Pages.Admin
 {
     public class IndexModel : PageModel
     {
         public bool DisplayInvalidAccountMessage = false;
+        public bool IsDevelopmentMode = false;
         IConfiguration configuration;
-        public IndexModel(IConfiguration configuration)
+        public IndexModel(IConfiguration configuration, IWebHostEnvironment env)
         {
             this.configuration = configuration;
+
+            if (env.IsDevelopment())
+                
+            {
+                IsDevelopmentMode = true;
+            }
         }
         public IActionResult OnGet()
         {
